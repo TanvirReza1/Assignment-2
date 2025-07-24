@@ -424,3 +424,244 @@
     max-width: 36px;
     max-height: 36px;
 }
+
+@media (max-width: 768px) {
+    .container {
+        padding: 0 15px;
+    }
+
+    .nav-bar {
+        margin-bottom: 50px;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+
+    .menu-container {
+        display: flex;
+        width: auto;
+        gap: 20px;
+        flex-grow: 1;
+        justify-content: flex-end;
+    }
+
+    .desktop-only {
+        display: none;
+    }
+
+    .cart-menu-item {
+        display: block;
+    }
+
+    .banner-section {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .banner-left-side-cintainer,
+    .banner-right-side-container {
+        width: 100%;
+        min-width: unset;
+        margin-bottom: 30px;
+    }
+
+    .banner-title {
+        font-size: 2.5rem;
+        line-height: 1.2;
+    }
+
+    .common-description-style br {
+        display: none;
+    }
+
+    .card-section {
+        grid-template-columns: repeat(2, 1fr);
+        margin-bottom: 80px;
+        justify-items: center;
+    }
+
+    .card-container {
+        max-width: 100%;
+        margin-bottom: 20px;
+    }
+
+    .flower-store-section {
+        flex-direction: column;
+        gap: 30px;
+        margin-bottom: 80px;
+    }
+
+    .flower-store-wrapper {
+        width: 100%;
+        text-align: center;
+    }
+
+    .flower-store-img {
+        max-width: 100%;
+        height: auto;
+    }
+
+    .badge {
+        position: static;
+        transform: none;
+        margin-top: 20px;
+        max-width: 150px;
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .store-description-container {
+        width: 100%;
+        text-align: center;
+    }
+
+    .store-head {
+        font-size: 2.2rem;
+    }
+
+    .sotre-description-list {
+        font-size: 1rem;
+        margin-bottom: 15px;
+    }
+
+    .sotre-description-list br {
+        display: none;
+    }
+
+    .deal-title {
+        font-size: 2.5rem;
+    }
+
+    .deal-subtitle {
+        font-size: 1rem;
+        margin-bottom: 60px;
+    }
+
+    .deal-subtitle br {
+        display: none;
+    }
+
+    .plan-img-container {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .left-column,
+    .right-column {
+        width: 100%;
+        max-width: 100%;
+        flex: none;
+    }
+
+    .image-wrapper {
+        height: 200px;
+    }
+
+    .image-wrapper.large {
+        height: 300px;
+    }
+
+    .discount {
+        font-size: 1em;
+    }
+
+    .discount.large-text {
+        font-size: 1.5em;
+    }
+
+    .subscribe-section {
+        height: 400px;
+        background-size: cover;
+    }
+
+    .join-section {
+        font-size: 2.2rem;
+        margin-bottom: 15px;
+    }
+
+    .input-container {
+        flex-direction: column;
+        height: auto;
+        gap: 10px;
+        max-width: 90%;
+    }
+
+    #email,
+    .subscribe-button {
+        width: 100%;
+        max-width: unset;
+        height: 50px;
+        padding: 10px 20px;
+    }
+
+    .footer-section {
+        grid-template-columns: 1fr;
+        gap: 40px;
+        text-align: center;
+    }
+
+    .logo-and-description-contaner,
+    .nav-container-footer,
+    .last-nav-container,
+    .tech-logo-container {
+        width: 100%;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .footer-list-container {
+        max-height: unset;
+        padding-top: 20px;
+    }
+
+    .footer-nav-list {
+        margin-bottom: 15px;
+    }
+
+    .tech-logo-container {
+        padding-top: 0;
+        margin-top: 0;
+    }
+
+    .twitter-icon {
+        transform: translateY(0);
+    }
+}
+
+@media (max-width: 480px) {
+    .banner-title {
+        font-size: 2rem;
+    }
+
+    .main-title {
+        font-size: 2rem;
+    }
+
+    .deal-title {
+        font-size: 2rem;
+    }
+
+    .card-section {
+        grid-template-columns: repeat(2,1fr);
+    }
+
+    .flower-card-img{
+      max-width:171px ;
+      height: auto;
+      width: 100%;
+    }
+
+    .shop-button {
+        padding: 10px 15px;
+        font-size: 0.9em;
+    }
+
+    .discount {
+        font-size: 0.9em;
+    }
+
+   
+    .discount.large-text {
+        font-size: 1.2em;
+    }
+}
