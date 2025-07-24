@@ -51,7 +51,9 @@
 
 .banner-text-style {
   color: #e95a08;
+  font-family: "Noto Serif", serif;
 }
+
 
 .common-description-style {
   font-size: 1.375rem;
@@ -72,6 +74,12 @@
 .main-description {
   text-align: center;
   margin-top: 16px;
+}
+
+.common-description-style {
+  color: rgba(0, 0, 0, 0.5);
+  margin-top: 16px;
+  font-size: 1.375rem;
 }
 
 /* card */
@@ -168,4 +176,251 @@
   font-size: 1.375rem;
   margin-bottom: 20px;
   color: rgba(0, 0, 0, 0.5);
+}
+
+.latest-deal-section {
+  margin-bottom: 120px;
+}
+
+.deal-title,
+.latest-font-family {
+  text-align: center;
+  font-family: "Noto Serif", serif;
+  font-size: 3.125rem;
+  font-weight: bold;
+}
+
+.deal-subtitle {
+  color: rgba(0, 0, 0, 0.5);
+  margin-top: 16px;
+  font-size: 1.375rem;
+  text-align: center;
+  margin-bottom: 120px;
+}
+
+.plan-img-container {
+  display: flex;
+  gap: 29px;
+  align-items: stretch;
+  max-width: 1200px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.left-column {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  flex: 1;
+  max-width: 366px;
+}
+
+.right-column {
+  flex: 2;
+  max-width: 753px;
+}
+
+.image-wrapper {
+  position: relative;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  flex: 1;
+}
+
+.image-wrapper.large {
+  flex-grow: 1;
+}
+
+.plant-image {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 10px;
+}
+.right-column .image-wrapper.large {
+  width: 100%;
+  height: 100%;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.4);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  text-align: center;
+  padding: 10px;
+  box-sizing: border-box;
+  border-radius: 10px;
+}
+
+.discount {
+  font-size: 1.25em;
+  font-weight: bold;
+  margin-bottom: 10px;
+  font-family: "Noto Serif", serif;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.7);
+}
+
+.discount.large-text {
+  font-size: 1.8em;
+}
+
+.shop-button {
+  background-color: #4caf50;
+  color: white;
+  padding: 8px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1em;
+  transition: background-color 0.3s ease;
+}
+
+.shop-button:hover {
+  background-color: #45a049;
+}
+
+/* join */
+
+.subscribe-section {
+  position: relative;
+  width: 100%;
+  max-width: 100%;
+  height: 533px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  text-align: center;
+  overflow: hidden;
+  border-radius: 0;
+  box-shadow: none;
+  background-image: url("../assets/news-letter-bg.png");
+  background-size: cover;
+
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.subscribe-section::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(7, 51, 79, 0.4);
+  z-index: 1;
+}
+
+.join-section {
+  font-size: 3.125rem;
+  font-weight: bold;
+  margin-bottom: 23px;
+  z-index: 2;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+  font-family: "Noto Serif", serif;
+}
+
+.input-container {
+  display: flex;
+  gap: 0;
+  max-width: 644px;
+  width: 100%;
+  height: 50px;
+  z-index: 2;
+}
+
+#email {
+  flex-grow: 1;
+  padding: 0 20px;
+  border: none;
+  font-size: 1em;
+  outline: none;
+  background-color: rgba(255, 255, 255, 0.9);
+  height: 100%;
+  box-sizing: border-box;
+}
+
+#email::placeholder {
+  color: #888;
+}
+
+.subscribe-button {
+  background: rgb(233, 90, 8);
+  color: white;
+  padding: 0 50px;
+  font-weight: 600;
+  border: none;
+  font-size: 1em;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  white-space: nowrap;
+  max-width: 186px;
+  width: auto;
+  height: 100%;
+  box-sizing: border-box;
+}
+.subscribe-button:hover {
+  background-color: #e65100;
+}
+
+.footer-section {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 110.67px;
+  margin-top: 50px;
+  margin-bottom: 50px;
+}
+
+.company-description {
+  margin-top: 16px;
+}
+
+.link-nav {
+  text-decoration: none;
+  color: rgb(107, 114, 128);
+}
+
+.footer-nav-list {
+  list-style: none;
+  margin-bottom: 32px;
+}
+
+.footer-list-container {
+  max-height: 248px;
+}
+
+.container-footer {
+  max-width: 1120px;
+  width: 100%;
+  max-height: 248px;
+  margin: 50px auto;
+}
+
+.tech-logo-container {
+  display: flex;
+  flex-direction: row;
+  align-items:center;
+  align-items: start;
+  gap: 32px;
+  padding-top: 5px;
+}
+
+.twitter{
+    transform: translateY(8px);
+}
+.tech-logo-container img{
+    max-width: 36px;
+    max-height: 36px;
 }

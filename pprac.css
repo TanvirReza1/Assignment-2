@@ -1,0 +1,96 @@
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+    background-color: #f0f2f5; /* A light background similar to the image */
+}
+
+.plan-img-container {
+    display: flex;
+    gap: 29px; /* The gap you identified */
+    align-items: stretch; /* Ensures columns stretch to fit content if heights vary */
+}
+
+.left-column {
+    display: flex;
+    flex-direction: column;
+    gap: 20px; /* Gap between the two small images */
+}
+
+.image-wrapper {
+    position: relative;
+    border-radius: 10px; /* Rounded corners */
+    overflow: hidden; /* Ensures anything outside the border-radius is hidden */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+}
+
+.image-wrapper.large {
+    flex-grow: 1; /* Allows the large image to take up available space */
+}
+
+.plant-image {
+    display: block; /* Removes extra space below image */
+    width: 100%;
+    height: 100%; /* Ensures image fills its container */
+    object-fit: cover; /* Crops image to fit without distorting aspect ratio */
+    border-radius: 10px;
+}
+
+/* Specific sizes for demonstration - you'll adjust these based on your design */
+.left-column .image-wrapper {
+    width: 250px; /* Example width for small images */
+    height: 180px; /* Example height for small images */
+}
+
+.right-column .image-wrapper.large {
+    width: 600px; /* Example width for large image */
+    height: 400px; /* Example height for large image */
+}
+
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to bottom, rgba(0,0,0,0.4) 0%, rgba(0,0,0,0.1) 50%, rgba(0,0,0,0.4) 100%); /* Subtle gradient for overlay */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    text-align: center;
+    padding: 10px;
+    box-sizing: border-box; /* Include padding in element's total width and height */
+    border-radius: 10px; /* Match parent border-radius */
+}
+
+.discount {
+    font-size: 1.2em;
+    font-weight: bold;
+    margin-bottom: 10px;
+    text-shadow: 1px 1px 3px rgba(0,0,0,0.7); /* Text shadow for readability */
+}
+
+.discount.large-text {
+    font-size: 1.8em; /* Larger text for the Zabo Plant */
+}
+
+.shop-button {
+    background-color: #4CAF50; /* Green background for button */
+    color: white;
+    padding: 8px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1em;
+    transition: background-color 0.3s ease;
+}
+
+.shop-button:hover {
+    background-color: #45a049;
+}
