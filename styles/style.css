@@ -87,14 +87,27 @@
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   gap: 20px;
-  margin-bottom: 210px;
+  margin-bottom: 80px;
+  justify-items: center;
 }
 
 .card-container {
-  max-width: 270px;
+  border: none;
+  outline: none;
+  box-shadow: none;
+  padding: 0;
+  justify-content: center;
+  align-items: center;
   width: 100%;
-  max-height: 484.5px;
-  margin-bottom: 30px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 20px;
+  text-align: center;
+  position: relative;
+}
+.card-container img {
+  display: block;
+  margin: 0 auto;
 }
 
 .product-name {
@@ -206,6 +219,10 @@
   margin: 0 auto;
 }
 
+.flower-card-img {
+  width: 270px;
+  height: auto;
+}
 .left-column {
   display: flex;
   flex-direction: column;
@@ -261,7 +278,8 @@
   border-radius: 10px;
 }
 
-.discount,.large-text {
+.discount,
+.large-text {
   font-size: 20px;
   font-weight: bold;
   margin-bottom: 10px;
@@ -269,7 +287,6 @@
   color: rgb(255, 255, 255);
   text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.7);
 }
-
 
 .shop-button {
   background-color: #4caf50;
@@ -342,7 +359,7 @@
   flex-grow: 1;
   padding: 0 20px;
   border: none;
- 
+
   outline: none;
   background-color: rgba(255, 255, 255, 0.9);
   height: 100%;
@@ -357,15 +374,14 @@
   background: rgb(233, 90, 8);
   color: white;
   padding: 0 50px;
- ;
   border: none;
-  
+
   cursor: pointer;
   transition: background-color 0.3s ease;
-  
+
   max-width: 186px;
-  
- text-align: center;
+
+  text-align: center;
   box-sizing: border-box;
 }
 .subscribe-button:hover {
@@ -389,7 +405,8 @@
   color: rgb(107, 114, 128);
 }
 
-.footer-nav-list, .footer-nav-list2 {
+.footer-nav-list,
+.footer-nav-list2 {
   list-style: none;
   margin-bottom: 32px;
 }
@@ -423,15 +440,45 @@
 }
 
 @media (max-width: 768px) {
+  body {
+    overflow-x: hidden;
+  }
+  
   .container {
     padding: 0 15px;
   }
 
- 
+  
+
+
+  .menu-container .menu-list {
+    display: none;
+  }
+
+  .menu-list.only-visible {
+    display: list-item;
+  }
+
+  .menu-container .cart-menu-item {
+    display: block;
+  }
+
+  .menu-container .cart-menu-item a.visible {
+    display: inline-block;
+  }
+
+  .visible {
+    visibility: visible;
+  }
+
   .nav-bar {
     margin-bottom: 50px;
     flex-wrap: wrap;
     justify-content: space-between;
+  }
+
+  .cart-nav {
+    margin-right: 40px;
   }
 
   .menu-container {
@@ -451,8 +498,11 @@
   }
 
   .banner-section {
-    flex-direction: column;
-    text-align: center;
+    flex-direction: column-reverse;
+  }
+
+  .latest-deal-section{
+    margin-bottom: 50px;
   }
 
   .banner-left-side-cintainer,
@@ -462,31 +512,50 @@
     margin-bottom: 30px;
   }
 
+  .banner-right-side-container img {
+    display: block;
+    width: 100%;
+    margin: 0;
+  }
+
   .banner-title {
-    font-size: 2.5rem;
+    font-size: 2rem;
     line-height: 1.2;
   }
 
-  .common-description-style br {
+  .main-title,
+  .deal-title {
+    font-size: 2rem;
+  }
+
+  .common-description-style br,
+  .sotre-description-list br,
+  .deal-subtitle br {
     display: none;
   }
 
   .card-section {
     grid-template-columns: repeat(2, 1fr);
-    margin-bottom: 80px;
-    justify-items: center;
+    align-items: center;
+    justify-content: center;
     text-align: center;
+    gap: 20px;
+    margin-bottom: 80px;
+    padding: 0 15px;
   }
 
   .card-container {
+    width: 100%;
+    height: auto;
     max-width: 100%;
-    margin-bottom: 20px;
+    margin-bottom: 30px;
+    text-align: center;
   }
 
   .flower-store-section {
     flex-direction: column;
     gap: 30px;
-    margin-bottom: 80px;
+    margin-bottom: 143pxpx;
   }
 
   .flower-store-wrapper {
@@ -494,24 +563,20 @@
     text-align: center;
   }
 
-  .flower-store-img {
+  .flower-card-img {
+    width: 100%;
     max-width: 100%;
     height: auto;
+    display: block;
+    margin: 0 auto;
   }
 
   .badge {
-    position: static;
-    transform: none;
-    margin-top: 20px;
-    max-width: 150px;
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
+    display: none;
   }
 
   .store-description-container {
     width: 100%;
-    text-align: center;
   }
 
   .store-head {
@@ -523,25 +588,9 @@
     margin-bottom: 15px;
   }
 
-  .sotre-description-list br {
-    display: none;
-  }
-
-  .badge{
-    display: none;
-  }
-
-  .deal-title {
-    font-size: 2.5rem;
-  }
-
   .deal-subtitle {
     font-size: 1rem;
     margin-bottom: 60px;
-  }
-
-  .deal-subtitle br {
-    display: none;
   }
 
   .plan-img-container {
@@ -568,7 +617,6 @@
     height: 400px;
     background-size: cover;
     text-align: center;
-    
   }
 
   .join-section {
@@ -576,40 +624,52 @@
     margin-bottom: 15px;
   }
 
-  
-
-  #email
-   {
+  #email {
     width: 100%;
     max-width: 218px;
     height: 50px;
     padding: 10px 20px;
   }
 
-  .input-container{
+  .input-container {
     justify-content: center;
-    
   }
 
-  .subscribe-button{
+  .subscribe-button {
     max-width: 103px;
     padding: 10px 15px;
-    }
+  }
+
+  .card-btn {
+    width: 100%;
+    max-width: 270px;
+    height: 50px;
+    font-size: 1rem;
+    padding: 0;
+    margin: 0 auto;
+  }
 
   .footer-section {
     grid-template-columns: 1fr;
     gap: 20px;
-   margin-left: 15px;
+    margin-left: 15px;
+    padding-bottom: 50px;
   }
 
-  
-
   .footer-list-container {
-   
     padding-top: 20px;
   }
 
-  .footer-nav-list,.footer-nav-list2  {
+  .nav-container-footer{
+    width: 85px;
+  }
+
+  .last-nav-container{
+    width: 128px;
+  }
+ 
+  .footer-nav-list,
+  .footer-nav-list2 {
     margin-bottom: 32px;
   }
 
@@ -621,53 +681,6 @@
   .twitter-icon {
     transform: translateY(0);
   }
-}
-
-@media (max-width: 768px) {
-  .menu-container .menu-list {
-    display: none;
-  }
-
-  .menu-container .cart-menu-item {
-    display: block;
-  }
-
-  .menu-container .cart-menu-item a.visible {
-    display: inline-block;
-  }
-
-  .visible{
-    visibility:visible ;
-  }
-
-  .banner-title {
-    font-size: 2rem;
-  }
-
-  .main-title {
-    font-size: 2rem;
-  }
-
-  .deal-title {
-    font-size: 2rem;
-  }
-
-  .card-section {
-    grid-template-columns: repeat(2, 1fr);
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-  }
-
-  .flower-card-img {
-    max-width: 171px;
-    height: auto;
-    width: 100%;
-  }
-
-  .badge{
-    display: none;
-  }
 
   .shop-button {
     padding: 10px 15px;
@@ -677,6 +690,4 @@
   .discount {
     font-size: 20px;
   }
-
-  
 }
